@@ -1,8 +1,6 @@
 import Link from "next/link";
+import { buttonClasses } from "@/components/ui/button";
 import { SITE_NAME } from "@/lib/site";
-
-const buttonBase =
-  "inline-flex h-12 items-center justify-center rounded-full px-6 text-base font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 
 export function Hero() {
   return (
@@ -20,16 +18,10 @@ export function Hero() {
           request and stay in control of your calendar.
         </p>
         <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-          <Link
-            href="/register"
-            className={`${buttonBase} bg-brand text-brand-foreground hover:bg-brand-hover`}
-          >
+          <Link href="/register" className={buttonClasses("primary")}>
             Register your clinic
           </Link>
-          <Link
-            href="/login"
-            className={`${buttonBase} border border-border hover:bg-foreground/5`}
-          >
+          <Link href="/login" className={buttonClasses("secondary")}>
             Clinic sign in
           </Link>
         </div>

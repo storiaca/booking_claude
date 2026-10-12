@@ -8,6 +8,7 @@
   --brand-foreground: #ffffff;
   --muted-foreground: #52525b;
   --border: #e4e4e7;
+  --destructive: #b91c1c;
 }
 
 @theme inline {
@@ -18,6 +19,7 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-destructive: var(--destructive);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -31,6 +33,7 @@
     --brand-foreground: #042f2e;
     --muted-foreground: #a1a1aa;
     --border: #27272a;
+    --destructive: #f87171;
   }
 }
 

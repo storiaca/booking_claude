@@ -23,7 +23,9 @@ On the first message of every chat, do nothing and reply only with "spreman sam"
 
 - Do all database work through the Supabase MCP server. It has full read-write access, not read-only.
 - Read the current schema through MCP before writing queries or types. Do not guess table or column names.
-- Auth, data-access patterns and the dev/prod environment setup are not decided yet. Ask instead of assuming.
+- Auth is Supabase Auth with email and password, through `@supabase/ssr`. The cookie session is refreshed in `proxy.ts`. One account is one clinic (`public.clinics.owner_id` is unique). On the server, decide with `getClaims()`, never `getSession()`.
+- Data access goes through Server Actions and the data access layer in `lib/dal.ts`. Every protected page and Server Action calls `verifySession()` itself; the proxy and layouts are not the security boundary. Row Level Security is on every table and grants are set explicitly.
+- The connected Supabase project (`iyksaxqoajycpmrcpctc`) is the dev database. Apply schema changes through MCP and mirror the SQL in `supabase/migrations/<version>_<name>.sql`. The production setup is not decided yet. Ask instead of assuming.
 - Always check the latest Supabase documentation before doing or proposing anything in this project. A lot of new things are now added, so we need to be up to date.
 
 ## UI
