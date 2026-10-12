@@ -24,6 +24,7 @@ On the first message of every chat, do nothing and reply only with "spreman sam"
 - Do all database work through the Supabase MCP server. It has full read-write access, not read-only.
 - Read the current schema through MCP before writing queries or types. Do not guess table or column names.
 - Auth, data-access patterns and the dev/prod environment setup are not decided yet. Ask instead of assuming.
+- Always check the latest Supabase documentation before doing or proposing anything in this project. A lot of new things are now added, so we need to be up to date.
 
 ## UI
 
