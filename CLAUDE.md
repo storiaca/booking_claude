@@ -1,6 +1,6 @@
 # Booking app
 
-Accommodation booking web app: guests reserve stays by check-in and check-out dates.
+Dental appointment booking web app: clinics publish their availability and patients request appointments through a public link. See `PROJECT_DESCRIPTION.md` for the full description.
 
 ## First message
 
@@ -11,6 +11,7 @@ On the first message of every chat, do nothing and reply only with "spreman sam"
 - **Next.js 16.4.0**: App Router (`app/`), React 19.2, TypeScript in strict mode. Import alias `@/*` maps to the project root.
 - **Supabase**: the database and part of the backend.
 - **Tailwind CSS v4**: all UI styling.
+- **npm**: as package manager
 
 ## Commands
 
@@ -28,6 +29,10 @@ On the first message of every chat, do nothing and reply only with "spreman sam"
 
 - Style with Tailwind utility classes. Do not add CSS modules, inline styles or another styling library.
 - Tailwind v4 is configured in CSS, not in `tailwind.config.js`. Design tokens go in the `@theme` block in `app/globals.css`.
+
+## Project Description
+
+Always read this file: @PROJECT_DESCRIPTION.md
 
 <!-- BEGIN:nextjs-agent-rules -->
 
